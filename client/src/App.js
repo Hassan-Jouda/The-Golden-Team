@@ -1,21 +1,40 @@
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import React, { useState } from "react";
 
+import Home from "./Pages/Home";
+import Communtiy from "./Pages/Communtiy";
+import About from "./Pages/About Us";
+import Profile from "./Pages/Profile";
+import Workers from "./Pages/Workers";
+import WProfile from "./Pages/WProfile";
+import Customer from "./Pages/login/customer/Customer";
+import CustomerSignup from "./Pages/login/customer/CustomerSignup";
+import Worker from "./Pages/login/worker/Worker";
+import WorkerSignup from "./Pages/login/worker/WorkerSignup";
+import Navv from "./Components/Navbar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhwe</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navv />
+
+        <Routes>
+          <Route path="/Home" exact element={<Home />} />
+          <Route path="/About" element={<About />} />
+
+          <Route path="/Customer" element={<Customer />} />
+          <Route path="/CustomerSignup" element={<CustomerSignup />} />
+
+          <Route path="/Worker" element={<Worker />} />
+          <Route path="/WorkerSignup" element={<WorkerSignup />} />
+
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/WProfile" element={<wProfile />} />
+          <Route path="/Workers" element={<Workers />} />
+          <Route path="/Communtiy" element={<Communtiy />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
