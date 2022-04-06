@@ -1,0 +1,38 @@
+.mainFooter {
+  height: 280px;
+  background-color: #1572a1;
+
+  color: white;
+  padding-top: 60px;
+  font-size: 20px;
+}
+
+.conSubFooter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.subFooter ul {
+  list-style-type: none;
+  padding: 0px;
+  padding-left: 12px;
+}
+
+.subFooter ul li {
+  list-style-type: none;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.footerHr {
+  width: 85%;
+  text-align: center;
+  background: #e47500;
+  height: 0.5px;
+}
+
+.footerCopyright {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+}

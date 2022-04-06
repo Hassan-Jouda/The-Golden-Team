@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function customer() {
+export default function Customer() {
   return <div>customer</div>;
 }

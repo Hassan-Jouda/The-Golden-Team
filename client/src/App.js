@@ -4,7 +4,6 @@ import React, { useState } from "react";
 
 import Home from "./Pages/Home";
 import Communtiy from "./Pages/Communtiy";
-import About from "./Pages/About Us";
 import Profile from "./Pages/Profile";
 import Workers from "./Pages/Workers";
 import WProfile from "./Pages/WProfile";
@@ -12,12 +11,14 @@ import Customer from "./Pages/login/customer/Customer";
 import CustomerSignup from "./Pages/login/customer/CustomerSignup";
 import Worker from "./Pages/login/worker/Worker";
 import WorkerSignup from "./Pages/login/worker/WorkerSignup";
-import Navv from "./Components/Navbar";
+import NavBar from "./Components/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import About from "./Pages/About";
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navv />
+        <NavBar />
 
         <Routes>
           <Route path="/Home" exact element={<Home />} />

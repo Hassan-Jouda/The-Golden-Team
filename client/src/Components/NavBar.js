@@ -2,48 +2,49 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../App.css";
-export default function Navv() {
+
+const NavBar = () => {
   return (
     <div>
       <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar variant="dark" className="nnvv">
           <Container>
             <Navbar.Brand>Hacker</Navbar.Brand>
             <Nav className="m1-auto">
               <Nav.Link>
-                <Link to="/" className="navn">
+                <Link to="/Home" className="navn">
                   {" "}
                   Home{" "}
                 </Link>
               </Nav.Link>
 
               <Nav.Link>
-                <Link to="/Save" className="navn">
-                  About Us
+                <Link to="/About" className="navn">
+                  AboutUs
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navn">
-                <Link to="/About" className="navn">
+              <Nav.Link>
+                <Link to="/Login" className="navn">
                   Log in
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navn">
-                <Link to="/Profile" className="navn">
-                  Profile
+              <Nav.Link>
+                <Link to="/Communtiy" className="navn">
+                  Communtiy
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navn">
+              <Nav.Link>
                 <Link to="/Workers" className="navn">
                   Workers
                 </Link>
               </Nav.Link>
 
-              <Nav.Link className="navn">
-                <Link to="/Community" className="navn">
-                  Community
+              <Nav.Link>
+                <Link to="/Profile" className="navn">
+                  Profile
                 </Link>
               </Nav.Link>
             </Nav>
@@ -52,4 +53,5 @@ export default function Navv() {
       </>
     </div>
   );
-}
+};
+export default NavBar;
