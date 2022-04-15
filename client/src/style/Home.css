@@ -4,9 +4,9 @@
 }
 
 .container {
-  max-width: 1200px !important;
   margin: 0 auto;
-  z-index: 1;
+  max-width: 1200px !important;
+  text-align: center;
 }
 /* //////////////////////// */
 
@@ -18,6 +18,7 @@
 }
 
 .fildcard {
+  justify-content: space-around;
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -26,23 +27,40 @@
   border-radius: 10px;
   z-index: 1;
   height: 200px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .fildcard img {
   pointer-events: none;
-  position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  filter: brightness(0.2);
+  filter: brightness(0.4);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .fildcard h5 {
+  bottom: 0;
   color: #fff;
-  padding: 25px;
+  position: absolute;
   text-align: center;
+  width: 100%;
 }
+
 .fildcard p {
   color: #fff;
   padding: 0 25px 0px 25px;
 }
+/* ///////////////////////// */

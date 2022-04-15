@@ -12,7 +12,7 @@ import {
 import "../style/Profile.css";
 import { Link } from "react-router-dom";
 
-export default function Profile() {
+export default function EditProfile() {
   return (
     <div>
       <div className="btnsti">
@@ -27,80 +27,52 @@ export default function Profile() {
         </ButtonGroup>
       </div>
       <div className="tit">
-        <h3> Profile</h3>
+        <h3>Edit profile</h3>
         <img
           src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
           alt="app img"
           className="proimg"
         />
       </div>
-
+      <div className="btnimg">
+        <Button className="btn1" variant="Dark">
+          Delete picture
+        </Button>
+        <Button variant="light">Change picture</Button>{" "}
+      </div>
       <Form className="forpro">
         <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
           <Form.Label>First name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Hassan"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="email" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-3 inp" controlId="exampleForm.ControlInput1">
           <Form.Label>sacund name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Jouda"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="email" placeholder="" />
         </Form.Group>
       </Form>
       <Form className="forpro">
         <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
           <Form.Label>Location</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Gaza"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="email" placeholder="Gaza" />
         </Form.Group>
         <Form.Group className="mb-1 age" controlId="exampleForm.ControlInput1">
           <Form.Label>Age</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="13"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="numper" placeholder="30" />
         </Form.Group>
       </Form>
       <Form className="forpro">
         <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
           <Form.Label>Profession</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Hacker"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="email" placeholder="" />
         </Form.Group>
         <Form.Group className="mb-1 inp" controlId="exampleForm.ControlInput1">
           <Form.Label>College Degrees</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="student"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
+          <Form.Control type="text" placeholder="" />
         </Form.Group>
       </Form>
+      <Button className="btn1" variant="Dark">
+        save
+      </Button>{" "}
     </div>
   );
 }

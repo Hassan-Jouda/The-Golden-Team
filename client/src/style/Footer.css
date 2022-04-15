@@ -36,3 +36,11 @@
   text-align: center;
   margin-top: 25px;
 }
+.subFooter p {
+  color: #000;
+}
+.cop {
+  color: rgb(255, 255, 255);
+  background-color: #1572a1;
+  font-size: 12px;
+}

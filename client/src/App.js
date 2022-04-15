@@ -14,6 +14,7 @@ import WorkerSignup from "./Pages/login/worker/WorkerSignup";
 import NavBar from "./Components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./Pages/About";
+import EditProfile from "./Pages/EditProfile";
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Worker" element={<Worker />} />
           <Route path="/WorkerSignup" element={<WorkerSignup />} />
 
+          <Route path="/EditProfile" element={<EditProfile />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/WProfile" element={<wProfile />} />
           <Route path="/Workers" element={<Workers />} />

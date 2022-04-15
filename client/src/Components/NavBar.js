@@ -9,7 +9,7 @@ const NavBar = () => {
       <>
         <Navbar variant="dark" className="nnvv">
           <Container>
-            <Navbar.Brand>Hacker</Navbar.Brand>
+            <Navbar.Brand>SwiftHouse</Navbar.Brand>
             <Nav className="m1-auto">
               <Nav.Link>
                 <Link to="/Home" className="navn">

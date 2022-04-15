@@ -6,33 +6,47 @@ export default function Home() {
   const crafts = [
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://surry.edu/uploads/images/_heroImage/GettyImages-1147804793.jpg",
+      craft: "Carpentry",
     },
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://vid.alarabiya.net/images/2019/05/24/07118231-c182-4fb3-b77a-a26a1b772a52/07118231-c182-4fb3-b77a-a26a1b772a52_16x9_1200x676.jpg?width=1138",
+      craft: "Blacksmith",
     },
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://q8-al-asimah.com/wp-content/uploads/2021/02/%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%83%D9%88%D9%88%D9%8A%D8%AA.jpg",
+      craft: "Electricity",
     },
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://www.ghsalat.com/wp-content/uploads/2021/08/%D8%AA%D8%B5%D9%84%D9%8A%D8%AD-%D9%86%D8%B4%D8%A7%D9%81%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%AF%D9%8A-1.jpg",
+      craft: "Washing Machine",
     },
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/refrigerator-repairAR29032021-3-420x230.jpg",
+      craft: "Refrigerator",
     },
     {
       imgUrl:
-        "https://previews.123rf.com/images/ufabizphoto/ufabizphoto2004/ufabizphoto200401682/145561726-portrait-of-hardworking-carpenter-man-in-uniform-making-wooden-chair-on-an-order-handicraft-concept-.jpg",
-      craft: "Carpenter",
+        "https://apollo-ireland.akamaized.net/v1/files/jxdlpqi18yzs1-EG/image;s=644x461;olx-st/_1_.jpg",
+      craft: "Laptop",
+    },
+    {
+      imgUrl:
+        "https://s3-eu-west-1.amazonaws.com/content.argaamnews.com/06d93161-f6b7-4832-9e7b-963ae2c600f0.jpg",
+      craft: "Cars",
+    },
+    {
+      imgUrl:
+        "https://phonebooknumber.com/wp-content/uploads/2021/02/%D8%A3%D8%B1%D9%82%D8%A7%D9%85-%D8%B5%D9%8A%D8%A7%D9%86%D8%A9-%D8%AC%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6.png",
+      craft: "Mobile",
+    },
+    {
+      imgUrl: "https://www.tlifziwn.com/wp-content/uploads/2021/11/3.jpg",
+      craft: "TV",
     },
   ];
   const Cards = crafts.map((craft) => (
@@ -41,12 +55,12 @@ export default function Home() {
   return (
     <div>
       <img
-        src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+        src="https://handyman-spokane.com/wp-content/uploads/2017/04/Tools.-Slide.png"
         alt="app img"
         className="homeImg"
       />
       <h1 style={{ textAlign: "center" }}>Fields: </h1>
-      <div className="col-md-4 container  ">{Cards}</div>
+      <div className="col-md-4 container cards ">{Cards}</div>
       <Footer />
     </div>
   );
