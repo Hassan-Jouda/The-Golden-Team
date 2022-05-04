@@ -19,10 +19,22 @@ import {
   Card,
 } from "react-bootstrap";
 import "../style/Communtiy.css";
-
+import { storage } from "../firebase/firebase";
+import { v4 } from "uuid";
+import { ref, uploadBytes } from "firebase/storage";
 export default function Communtiy() {
   const [newPost, setNewPost] = useState("");
   const [newComment, setNewComment] = useState("");
+  // const { imagupload, setImagupload } = useState("null");
+
+  // const uploadImage = () => {
+  //   if (imagupload == null) return;
+  //   const imageRef = ref(storage, `images/${imagupload.name + v4()}`);
+
+  //   uploadBytes(imageRef, imagupload).then(() => {
+  //     alert("image uploaded");
+  //   });
+  // };
 
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState(0);
@@ -70,7 +82,11 @@ export default function Communtiy() {
 
     getUsers();
   }, []);
-  ///////////////////////
+
+  function createCommentUser() {
+    createUser();
+    // imagupload();
+  }
 
   return (
     <div className="App">
@@ -86,8 +102,14 @@ export default function Communtiy() {
           setNewPost(event.target.value);
         }}
       />
-
-      <button onClick={createUser}> Create منشور</button>
+      {/* <input
+        type="file"
+        onChange={(event) => {
+          setImagupload(event.target.files[0]);
+        }}
+      />
+      <button onClick={uploadImage}>Upload</button> */}
+      <button onClick={createCommentUser}> Create منشور</button>
       {users.map((user) => {
         return (
           <div>

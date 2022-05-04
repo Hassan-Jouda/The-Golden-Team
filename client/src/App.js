@@ -5,16 +5,17 @@ import React, { useState } from "react";
 import Home from "./Pages/Home";
 import Communtiy from "./Pages/Communtiy";
 import Profile from "./Pages/Profile";
-import Workers from "./Pages/Workers";
 import WProfile from "./Pages/WProfile";
-import Customer from "./Pages/login/customer/Customer";
 import CustomerSignup from "./Pages/login/customer/CustomerSignup";
-import Worker from "./Pages/login/worker/Worker";
 import WorkerSignup from "./Pages/login/worker/WorkerSignup";
 import NavBar from "./Components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./Pages/About";
 import EditProfile from "./Pages/EditProfile";
+import Login from "./Pages/login/Login";
+import Workers from "./Pages/Workers";
+import Signup from "./Pages/login/Signup";
+
 function App() {
   return (
     <div className="App">
@@ -22,14 +23,14 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route path="/Home" exact element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/About" element={<About />} />
 
-          <Route path="/Customer" element={<Customer />} />
-          <Route path="/CustomerSignup" element={<CustomerSignup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
-          <Route path="/Worker" element={<Worker />} />
           <Route path="/WorkerSignup" element={<WorkerSignup />} />
+          <Route path="/CustomerSignup" element={<CustomerSignup />} />
 
           <Route path="/EditProfile" element={<EditProfile />} />
           <Route path="/Profile" element={<Profile />} />

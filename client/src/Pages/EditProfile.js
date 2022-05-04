@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   ButtonGroup,
@@ -13,6 +13,14 @@ import "../style/Profile.css";
 import { Link } from "react-router-dom";
 
 export default function EditProfile() {
+  const [image, setImage] = useState(
+    "https://www.newsnationnow.com/wp-content/uploads/sites/108/2022/02/GettyImages-1152537185.jpg?strip=1"
+  );
+  const onImageChange = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      setImage(URL.createObjectURL(event.target.files[0]));
+    }
+  };
   return (
     <div>
       <div className="btnsti">
@@ -28,17 +36,22 @@ export default function EditProfile() {
       </div>
       <div className="tit">
         <h3>Edit profile</h3>
-        <img
-          src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
-          alt="app img"
-          className="proimg"
-        />
+        <img src={image} alt="app img" className="proimg" />
       </div>
       <div className="btnimg">
         <Button className="btn1" variant="Dark">
           Delete picture
         </Button>
-        <Button variant="light">Change picture</Button>{" "}
+        <Button
+          variant="light"
+          type="file"
+          id="avatar"
+          name="avatar"
+          accept="image/*"
+          onChange={onImageChange}
+        >
+          Change picture
+        </Button>{" "}
       </div>
       <Form className="forpro">
         <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">

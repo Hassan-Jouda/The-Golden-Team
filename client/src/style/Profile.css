@@ -52,6 +52,7 @@
   /* margin-top: 50px; */
   display: flex;
   margin-left: 200px;
+  width: auto !important;
 }
 .name {
   margin: 10px;

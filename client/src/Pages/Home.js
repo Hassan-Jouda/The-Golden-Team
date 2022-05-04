@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../Components/cardhome";
 import Footer from "../Components/Footer";
 import "../style/Home.css";
+
 export default function Home() {
   const crafts = [
     {
@@ -60,7 +62,9 @@ export default function Home() {
         className="homeImg"
       />
       <h1 style={{ textAlign: "center" }}>Fields: </h1>
-      <div className="col-md-4 container cards ">{Cards}</div>
+      <Link to="/Workers">
+        <div className="col-md-4 container cards ">{Cards}</div>
+      </Link>
       <Footer />
     </div>
   );

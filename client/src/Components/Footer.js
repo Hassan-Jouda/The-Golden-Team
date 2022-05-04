@@ -56,7 +56,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="cop">Copyright ® 2021 Hacker All rights Rcerved</p>
+      <p className="cop">Copyright ® 2022 Hacker All rights Rcerved</p>
     </footer>
   );
 };

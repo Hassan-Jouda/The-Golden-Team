@@ -12,7 +12,7 @@ const NavBar = () => {
             <Navbar.Brand>SwiftHouse</Navbar.Brand>
             <Nav className="m1-auto">
               <Nav.Link>
-                <Link to="/Home" className="navn">
+                <Link to="/" className="navn">
                   {" "}
                   Home{" "}
                 </Link>
@@ -25,8 +25,8 @@ const NavBar = () => {
               </Nav.Link>
 
               <Nav.Link>
-                <Link to="/Login" className="navn">
-                  Log in
+                <Link to="/signup" className="navn">
+                  sign up
                 </Link>
               </Nav.Link>
 
