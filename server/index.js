@@ -1,8 +1,12 @@
 import express from "express";
+import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
-
+import customerRoutes from "./routes/customer.js";
+import workerRoutes from "./routes/worker.js";
+import customer from "./models/customer.js";
+import worker from "./models/worker.js";
 const app = express();
 
 app.use(bodyParser.json({ limit: "20mb", extended: true }));
@@ -11,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 app.use(cors());
 
 const CONNECTION_URL =
-  "mongodb+srv://mohamedqesi:mohamed12@cluster0.t5qut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://hassan:0011@cluster0.2tj7f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;
 
@@ -28,4 +32,41 @@ mongoose
   )
   .catch((err) => console.log(err.message));
 
-app.use("/", student);
+app.use("/customer", customer);
+app.use("/worker", worker);
+
+app.post("/login", (req, res) => {
+  customer.find({ email: req.body.email }, { password: 1 }).then((data) => {
+    if (data.length === 0) {
+      worker.find({ email: req.body.email }, { password: 1 }).then((data) => {
+        if (data.length === 0) {
+          return res.json({ status: "not found" }).status(404);
+        } else {
+          worker.findById(data[0]._id, (err, workerData) => {
+            return res.json({
+              status: "worker",
+              data: workerData,
+            });
+          });
+          // store worker findbyId data into a variable
+        }
+      });
+    } else {
+      customer.findById(data[0]._id, (err, customerData) => {
+        return res.json({
+          status: "customer",
+          data: customerData,
+        });
+      });
+    }
+  });
+});
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
