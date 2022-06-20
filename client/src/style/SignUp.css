@@ -4,11 +4,18 @@
 }
 
 .gorm {
-  margin-top: 10px;
+  margin-top: 30px;
   background: #ffffff !important;
   font-family: "Fira Sans", sans-serif;
   border-radius: 20px;
   box-shadow: 0 0px 15px rgba(134, 134, 134, 0.7);
+  border-color: #0071ce !important;
+  background: linear-gradient(
+    92.48deg,
+    #ffffff 2.08%,
+    #ccd0df 117.25%,
+    #ffffff 2.08%
+  ) !important;
 }
 
 h1,
@@ -76,6 +83,34 @@ html,
 .underLinee {
   font-size: 15px;
 }
-.gorm {
-  margin-top: 10px !important;
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+.buttono {
+  background-color: #0071ce;
+  border: none;
+  color: white !important;
+  padding: 5px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.5s ease;
+  letter-spacing: 2px;
+  text-decoration: none;
+  justify-content: center;
+  left: 20px;
+}
+.buttono:hover {
+  background-color: #15a9f3;
+  transform: scale(1.03);
 }

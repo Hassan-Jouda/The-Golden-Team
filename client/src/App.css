@@ -92,3 +92,28 @@
   width: 100%;
   height: 500px;
 }
+
+.sin {
+  background-color: #0a2338;
+  border: none;
+  color: white !important;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 80;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  margin-top: -4px;
+}
+
+.sin:hover {
+  transform: scale(1.03);
+}
+.ss:hover {
+  color: rgb(255, 255, 255) !important;
+  transform: scale(1.03);
+}

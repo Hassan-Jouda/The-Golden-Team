@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import "../style/About.css";
 import Footer from "../Components/Footer";
 import { Form } from "react-bootstrap";
+
 export default function About() {
   return (
     <>
@@ -37,7 +38,7 @@ export default function About() {
           the world’s leading professional cloud and the world’s leading
           professional network.
         </p>
-      </section>
+      </section>{" "}
       <section className="carousel">
         <Carousel variant="dark" className="carousel1">
           <Carousel.Item>
@@ -92,11 +93,9 @@ export default function About() {
           </Carousel.Item>
         </Carousel>
       </section>
-
       <section className="A-contact">
         <h1>Contact SwiftHouse</h1>
       </section>
-
       <section style={{ backgroundColor: "#f6f7f9" }}>
         <div className="Contact">
           <div className="C-form">
@@ -183,7 +182,7 @@ export default function About() {
             >
               <div className="person">
                 <img
-                  src="https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg"
+                  src="https://vid.alarabiya.net/images/2022/03/03/9009b540-8457-4c0c-a75e-7e70fbdaa7a1/9009b540-8457-4c0c-a75e-7e70fbdaa7a1.jpg?crop=4:3&width=1200"
                   className="p-image"
                   alt=""
                 />
@@ -192,7 +191,7 @@ export default function About() {
 
               <div className="person">
                 <img
-                  src="https://scontent-mrs2-2.xx.fbcdn.net/v/t39.30808-6/272699231_912621866086769_4238490206738117231_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tvwMOU2hnB8AX-a9UDJ&_nc_ht=scontent-mrs2-2.xx&oh=00_AT9MQip8jRlcgUOYbWQ_IdW-Hto6t0nuB8CbPMuVVbJ-TQ&oe=626DDD9B"
+                  src="https://scontent.fgza6-1.fna.fbcdn.net/v/t39.30808-6/272699231_912621866086769_4238490206738117231_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=PrJPyMvH3skAX-AaUlA&_nc_ht=scontent.fgza6-1.fna&oh=00_AT-KxQtxfasydn47uLsT31-OQP4-2ptlKRN4mDhCY22c3w&oe=62995F1B"
                   className="p-image"
                   alt=""
                 />
@@ -211,7 +210,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       <Footer />
     </>
   );

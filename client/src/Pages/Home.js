@@ -4,7 +4,7 @@ import Card from "../Components/cardhome";
 import Footer from "../Components/Footer";
 import "../style/Home.css";
 
-export default function Home() {
+export default function Home({ auth, setAuth }) {
   const crafts = [
     {
       imgUrl:
@@ -56,15 +56,28 @@ export default function Home() {
   ));
   return (
     <div>
-      <img
-        src="https://handyman-spokane.com/wp-content/uploads/2017/04/Tools.-Slide.png"
-        alt="app img"
-        className="homeImg"
-      />
-      <h1 style={{ textAlign: "center" }}>Fields: </h1>
+      <div>
+        {" "}
+        <section className="homeImg"></section>
+        {/* <h2 className="topic"> Swift House</h2> */}
+      </div>
+
+      <h1 style={{ textAlign: "center", margin: "20px" }}>Fields: </h1>
+
+      {/* <Link to="/Workers">
+        <div className="col-md-4 container cards ">{Cards}</div>
+      </Link> */}
+
+      {/* {auth ? ( */}
       <Link to="/Workers">
         <div className="col-md-4 container cards ">{Cards}</div>
       </Link>
+      {/* ) : ( */}
+      {/* <Link to="/Signup">
+          <div className="col-md-4 container cards ">{Cards}</div>
+        </Link> */}
+      {/* )} */}
+
       <Footer />
     </div>
   );

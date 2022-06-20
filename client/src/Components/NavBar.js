@@ -1,52 +1,69 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { FaUser } from "react-icons/fa";
 
-const NavBar = () => {
+const NavBar = ({ auth, setAuth }) => {
+  const logout = () => {
+    window.localStorage.removeItem("auth");
+    window.localStorage.removeItem("current");
+    setAuth(false);
+  };
   return (
     <div>
       <>
         <Navbar variant="dark" className="nnvv">
           <Container>
-            <Navbar.Brand>SwiftHouse</Navbar.Brand>
+            <Navbar.Brand>
+              {" "}
+              <Link to="/" className="navn">
+                SwiftHouse
+              </Link>
+            </Navbar.Brand>
             <Nav className="m1-auto">
-              <Nav.Link>
+              {/* <Nav.Link>
                 <Link to="/" className="navn">
                   {" "}
                   Home{" "}
                 </Link>
-              </Nav.Link>
-
+              </Nav.Link> */}
               <Nav.Link>
                 <Link to="/About" className="navn">
                   AboutUs
                 </Link>
               </Nav.Link>
+              {/* {auth && ( */}
+              <>
+                <Nav.Link>
+                  <Link to="/Communtiy" className="navn">
+                    Communtiy
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/Workers" className="navn">
+                    Workers
+                  </Link>
+                </Nav.Link>
+              </>
+              {/* )} */}
+              {/* {auth ? ( */}
+              <>
+                {/* <button className="navBtn" onClick={logout}>
+                  <Link to="/" className="navn">
+                    Logout
+                  </Link>
+                </button> */}
 
-              <Nav.Link>
-                <Link to="/signup" className="navn">
-                  sign up
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link>
-                <Link to="/Communtiy" className="navn">
-                  Communtiy
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link>
-                <Link to="/Workers" className="navn">
-                  Workers
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link>
-                <Link to="/Profile" className="navn">
-                  Profile
-                </Link>
-              </Nav.Link>
+                <Nav.Link>
+                  <Link to="/Profile" className="links">
+                    <FaUser />
+                  </Link>
+                </Nav.Link>
+              </>
+              <Link to="/Signup" className="sin">
+                Login
+              </Link>
             </Nav>
           </Container>
         </Navbar>

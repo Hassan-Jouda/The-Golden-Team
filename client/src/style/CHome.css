@@ -1,0 +1,32 @@
+.article {
+  height: 200px;
+  width: 325px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.subCard {
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #565555 0%, rgba(196, 196, 196, 0) 100%);
+  z-index: 7;
+}
+.cardHeader {
+  color: white;
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

@@ -3,3 +3,24 @@
   margin: 10px;
   color: rgb(255, 250, 250) !important;
 }
+.post {
+  width: 18rem;
+  margin: 30px;
+  display: flex;
+}
+.like {
+  width: 30px;
+  right: 30px;
+}
+.like:hover {
+  transform: scale(1.1, 1.1);
+}
+.lll {
+  text-decoration: none;
+}
+.ttt {
+  background-color: rgb(255, 255, 255) !important;
+}
+.nnn {
+  top: 50px;
+}

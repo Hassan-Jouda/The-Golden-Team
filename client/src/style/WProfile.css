@@ -1,0 +1,177 @@
+.backgroundProfile {
+  width: 100%;
+  height: 300px;
+  opacity: 70%;
+  filter: blur(3px);
+}
+
+.contProfile {
+  width: 100%;
+  /* background-color: red; */
+  height: 450px;
+  margin-top: -230px;
+  z-index: 10;
+  position: relative;
+  justify-content: space-evenly;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.detailsProfile {
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #00000057;
+  /* height: 100px; */
+}
+.hireProfile {
+  width: 30%;
+  border-radius: 10px;
+  background-color: #1b1b1b;
+  box-shadow: 0px 0px 8px #000000;
+
+  /* display: flex; */
+
+  justify-content: center;
+}
+
+.hireProfile * {
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.topDetailsProfile {
+  display: flex;
+  /* justify-content: space-around; */
+  margin-top: 20px;
+}
+
+.profileImgProfile {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.nameConProfile * {
+  margin: 0;
+  padding: 0;
+}
+
+.nameSubConProfile {
+  margin-left: 30px;
+  /* background-color: red; */
+  width: 100%;
+}
+
+.nameProfile {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.usernameProfile {
+  opacity: 42%;
+  font-size: 20px;
+}
+
+.perProfile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.perProfile * {
+  font-size: 20px;
+}
+
+.per2Profile {
+  /* background-color: red; */
+  width: 50%;
+}
+
+.percentageProfile {
+  color: #1eb21b;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.bottomDetailsProfile {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contactProfile {
+  margin-right: 70px;
+  width: 180px;
+  /* padding: 0; */
+  /* background-color: red; */
+}
+
+.contactProfile * {
+  margin: 0px;
+  font-size: 20px;
+}
+
+.aboutConProfile * {
+  margin: 0px;
+  font-size: 20px;
+}
+
+.titleHireProfile {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.messageTextProfile {
+  width: 360px;
+  height: 150px;
+}
+
+.sendBtnProfile {
+  padding: 5px;
+  font-size: 18px;
+  width: 90px;
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 155px;
+  margin-top: 10px;
+}
+.STEP {
+  font-size: 17px;
+  font-weight: 550;
+  width: 120px;
+  text-align: center;
+  background-color: #1b1b1b;
+  padding: 6px;
+  color: #ffffff;
+  border-radius: 6px;
+  border: none;
+}
+.QProfile {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+.socialBtnProfile {
+  display: block;
+  margin: 5px;
+  width: 50%;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  align-self: center;
+  font-size: 18px;
+}

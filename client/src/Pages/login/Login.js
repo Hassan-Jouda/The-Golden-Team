@@ -16,6 +16,49 @@ export default function Login({ setAuth, current, setCurrent }) {
 
   const navigate = useNavigate();
 
+  const logIn = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/api/login", {
+        email: data.email,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data.data.password);
+        if (res.data.data.password === data.password) {
+          window.localStorage.setItem("auth", "true");
+          console.log(`ps again: ${res.data.data.password}`);
+          setAuth(true);
+          setCurrent({
+            name: res.data.data.name,
+            email: res.data.data.email,
+            bio: res.data.data.bio,
+            college_degree: res.data.data.college_degree,
+            location: res.data.data.location,
+            phone: res.data.data.phone,
+            profession: res.data.data.profession,
+          });
+          console.log(current);
+          console.log("logged in");
+          window.localStorage.setItem(
+            "current",
+            JSON.stringify({
+              name: res.data.data.name,
+              email: res.data.data.email,
+              bio: res.data.data.bio,
+              college_degree: res.data.data.college_degree,
+              location: res.data.data.location,
+              phone: res.data.data.phone,
+              profession: res.data.data.profession,
+            })
+          );
+          navigate("/");
+        } else {
+          setError("Wrong Password or Not Found");
+        }
+      })
+      .catch((err) => console.log(err.message));
+  };
   return (
     <>
       <section className="top-bg">
@@ -31,15 +74,27 @@ export default function Login({ setAuth, current, setCurrent }) {
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <p className="p1">Email or Phone Number</p>
-            <Form.Control type="text" className="C-input" />
+            <Form.Control
+              type="text"
+              className="C-input"
+              onChange={setUserData}
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <p className="p1">Password</p>
-            <Form.Control type="text" className="C-input" />
+            <Form.Control
+              type="text"
+              className="C-input"
+              onChange={setUserData}
+            />
           </Form.Group>
 
-          <a className="buttonofCustomer" type="submit">
+          <a
+            className="buttonofCustomer"
+            type="submit"
+            onClick={(e) => logIn(e)}
+          >
             Log In
           </a>
         </Form>

@@ -37,7 +37,7 @@ Form .p1 {
   background-color: #0071ce;
   border: none;
   color: white;
-  padding: 10px 10px;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -49,7 +49,7 @@ Form .p1 {
 }
 
 .buttonofCustomer:hover {
-  background-color: #1572a1;
+  color: rgb(255, 255, 255);
   transform: scale(1.03);
 }
 

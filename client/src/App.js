@@ -15,7 +15,8 @@ import EditProfile from "./Pages/EditProfile";
 import Login from "./Pages/login/Login";
 import Workers from "./Pages/Workers";
 import Signup from "./Pages/login/Signup";
-
+import TParticles from "./Components/TParticles";
+import PreLoader1 from "./Components/PreLoader1";
 function App() {
   return (
     <div className="App">

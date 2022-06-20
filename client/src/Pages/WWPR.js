@@ -2,7 +2,7 @@ import React from "react";
 import "../style/WProfile.css";
 import { Link } from "react-router-dom";
 
-export default function WProfile() {
+export default function WWPR() {
   return (
     <div className="mainProfile">
       <img

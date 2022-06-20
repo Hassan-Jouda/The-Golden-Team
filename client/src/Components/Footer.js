@@ -8,6 +8,7 @@ import {
   FaPhoneAlt,
   FaHeadset,
 } from "react-icons/fa";
+import ScrollButton from "../Components/ScrollButton";
 
 const Footer = () => {
   return (
@@ -56,6 +57,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <ScrollButton />
       <p className="cop">Copyright ® 2022 Hacker All rights Rcerved</p>
     </footer>
   );
