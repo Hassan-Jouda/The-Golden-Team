@@ -82,8 +82,9 @@ export default function Workers() {
   return (
     <div className="workers">
       <div className="mainFiltersWorkers">
-        <from>
-          <p className="titleFilters">Filters:</p>
+      <p className="titleFilters">Filters:</p>
+        <from className="Filters" >
+          
           <p>Min Price:</p>
           <input type="number" />
           <p>Max Price:</p>
@@ -92,15 +93,15 @@ export default function Workers() {
           <input type="number" />
           <p>Language:</p>
           <input type="text" />
-          <p>Experince:</p>
-          <input type="tetx" />
+          <p>Experiance:</p>
+          <input type="text" />
           <button>Submit</button>
         </from>
       </div>
       <div className="mainWorkers cards container">
-        {/* {workers.map((workers) => (
+        {/* {workers.map((worker) => (
           <Cardsworkers
-            name="{worker.name}"
+            name={worker.name}
             username="car.fixing"
             about="hjlvhj"
             backgroundUrl="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484"

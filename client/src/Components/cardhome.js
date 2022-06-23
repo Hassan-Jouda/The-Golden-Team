@@ -1,15 +1,6 @@
 import React from "react";
 import "../style/Home.css";
-import {
-  Button,
-  ButtonGroup,
-  Form,
-  Row,
-  Col,
-  yup,
-  InputGroup,
-  formik,
-} from "react-bootstrap";
+
 const Card = ({ imgUrl, craft }) => {
   return (
     <div className="fildcard">
@@ -20,10 +11,3 @@ const Card = ({ imgUrl, craft }) => {
 };
 
 export default Card;
-// <article className="article">
-//   <div className="subCard">
-//     <h2 className="cardHeader">{craft}</h2>
-//     <div className="shadow" />
-//   </div>
-//   <img src={imgUrl} alt={craft} className="cardImg" />
-// </article>

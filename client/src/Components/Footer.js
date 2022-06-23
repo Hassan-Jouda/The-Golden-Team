@@ -25,12 +25,8 @@ const Footer = () => {
         </div>
 
         <div className="subFooter">
-          <p>Contact us</p>
+          <p>Contact us<span style={{paddingLeft:20}} ><FaHeadset /></span></p>
 
-          <p>
-            {" "}
-            <FaHeadset />
-          </p>
           <ul>
             <li>help@swifthouse.com</li>
             <li>

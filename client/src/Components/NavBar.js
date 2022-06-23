@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { FaUser } from "react-icons/fa";
@@ -37,7 +37,7 @@ const NavBar = ({ auth, setAuth }) => {
               <>
                 <Nav.Link>
                   <Link to="/Communtiy" className="navn">
-                    Communtiy
+                    Community
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
@@ -57,7 +57,7 @@ const NavBar = ({ auth, setAuth }) => {
 
                 <Nav.Link>
                   <Link to="/Profile" className="links">
-                    <FaUser />
+                    <FaUser className="userr" />
                   </Link>
                 </Nav.Link>
               </>
