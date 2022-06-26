@@ -1,3 +1,7 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -43,6 +47,7 @@
 }
 .navn:hover {
   color: #000;
+  transition: 0.2s ease;
 }
 
 .text {
@@ -98,26 +103,37 @@
 }
 
 .sin {
-  background-color: #0a2338;
+  background-color: #1572a1;
   border: none;
   color: white !important;
-  padding: 5px 30px;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  font-weight: 80;
+  font-weight: 300;
   cursor: pointer;
-  border-radius: 12px;
-  transition: 0.5s ease;
+  border-radius: 5px;
+  transition: 0.3s ease;
   text-decoration: none;
-  margin-top: -4px;
 }
 
 .sin:hover {
-  transform: scale(1.03);
+  border-radius: 20px;
+  background-color: #282c34;
+  margin-left: 20px;
 }
 .ss:hover {
   color: rgb(255, 255, 255) !important;
   transform: scale(1.03);
+}
+
+.userr{
+  color: #ffffff;
+  transition: 0.3s ease;
+  font-size: 17px;
+}
+
+.userr:hover{
+  color: #282c34;
 }

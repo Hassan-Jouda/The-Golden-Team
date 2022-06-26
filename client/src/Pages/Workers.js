@@ -90,8 +90,8 @@ export default function Workers() {
   return (
     <div className="workers">
       <div className="mainFiltersWorkers">
-        <from>
-          <p className="titleFilters">Filters:</p>
+        <p className="titleFilters">Filters:</p>
+        <from className="Filters">
           <p>Min Price:</p>
           <input type="number" />
           <p>Max Price:</p>

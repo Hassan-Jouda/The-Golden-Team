@@ -37,7 +37,10 @@
   margin-top: 25px;
 }
 .subFooter p {
+  margin: 20px;
   color: #000;
+  font-weight: 600;
+  text-align: center;
 }
 .cop {
   color: rgb(255, 255, 255);

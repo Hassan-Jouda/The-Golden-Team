@@ -11,10 +11,3 @@ const Card = ({ imgUrl, craft }) => {
 };
 
 export default Card;
-// <article className="article">
-//   <div className="subCard">
-//     <h2 className="cardHeader">{craft}</h2>
-//     <div className="shadow" />
-//   </div>
-//   <img src={imgUrl} alt={craft} className="cardImg" />
-// </article>

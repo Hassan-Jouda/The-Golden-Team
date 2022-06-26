@@ -37,7 +37,7 @@ const NavBar = ({ auth, setAuth }) => {
               <>
                 {/* <Nav.Link>
                   <Link to="/Communtiy" className="navn">
-                    Communtiy
+                    Community
                   </Link>
                 </Nav.Link> */}
 
@@ -75,7 +75,7 @@ const NavBar = ({ auth, setAuth }) => {
 
                 <Nav.Link>
                   <Link to="/Profile" className="links">
-                    <FaUser />
+                    <FaUser className="userr" />
                   </Link>
                 </Nav.Link>
               </>
