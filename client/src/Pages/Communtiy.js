@@ -1,33 +1,5 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase/firebase";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore";
-import {
-  Button,
-  ButtonGroup,
-  Form,
-  Row,
-  Col,
-  yup,
-  InputGroup,
-  Card,
-} from "react-bootstrap";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
-import "../style/Communtiy.css";
-import { storage } from "../firebase/firebase";
-import { v4 } from "uuid";
-import { ref, uploadBytes } from "firebase/storage";
-export default function Communtiy() {
-  const [newPost, setNewPost] = useState("");
-  const [newComment, setNewComment] = useState("");
-  const [visible, setVisible] = useState(false);
 
   // const { imagupload, setImagupload } = useState("null");
 
