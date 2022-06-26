@@ -18,6 +18,13 @@ import Signup from "./Pages/login/Signup";
 import CardProfile from "./Components/CardProfile";
 import ProblemsSolving from "./Pages/ProblemsSolving";
 function App() {
+  const [auth, setAuth] = useState(localStorage.getItem("auth") ? true : false);
+  const [current, setCurrent] = useState(
+    localStorage.getItem("current")
+      ? JSON.parse(localStorage.getItem("current"))
+      : {}
+  );
+  console.log(current);
   return (
     <div className="App">
       <Router>

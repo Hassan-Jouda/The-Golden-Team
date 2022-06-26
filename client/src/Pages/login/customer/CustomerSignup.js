@@ -89,7 +89,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
             />
           </div>
           <div className="d-grid">
-            <button className="buttono" onClick={CustomerSignup}>
+            <button className="buttono" onClick={(e) => CustomerSignup(e)}>
               Sign Up
             </button>
           </div>

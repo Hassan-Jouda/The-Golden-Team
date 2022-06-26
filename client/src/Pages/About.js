@@ -3,7 +3,6 @@ import { Carousel } from "react-bootstrap";
 import "../style/About.css";
 import Footer from "../Components/Footer";
 import { Form } from "react-bootstrap";
-import WOW from "wowjs";
 
 export default function About() {
   return (
@@ -200,12 +199,10 @@ export default function About() {
               </div>
 
               <div className="person">
-                <img
-                  src="https://i1.sndcdn.com/avatars-0teXffNaCbUO5KUr-HHYdEA-t500x500.jpg"
-                  className="p-image"
-                  alt=""
-                />
                 <p className="p-name">Dema Switi</p>
+              </div>
+              <div className="person">
+                <p className="p-name">Shimaa Azoom</p>
               </div>
             </div>
           </div>

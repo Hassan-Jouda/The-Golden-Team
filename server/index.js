@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 app.use(cors());
 
 const CONNECTION_URL =
-  "mongodb+srv://Hassan:059509@cluster0.pjcmnzm.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://Hassan:059509@cluster0.pjcmnzm.mongodb.net/SwiftHouse?retryWrites=true&w=majority";
 
 const PORT = 5000;
 
@@ -33,7 +33,9 @@ mongoose
 1;
 app.use("/customer", customer);
 app.use("/worker", worker);
-
+app.get("/", (req, res) => {
+  res.send("got em");
+});
 app.post("/login", (req, res) => {
   customer.find({ email: req.body.email }, { password: 1 }).then((data) => {
     if (data.length === 0) {
