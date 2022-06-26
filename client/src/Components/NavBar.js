@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Container, Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { FaUser } from "react-icons/fa";
@@ -35,11 +35,29 @@ const NavBar = ({ auth, setAuth }) => {
               </Nav.Link>
               {/* {auth && ( */}
               <>
-                <Nav.Link>
+                {/* <Nav.Link>
                   <Link to="/Communtiy" className="navn">
                     Communtiy
                   </Link>
-                </Nav.Link>
+                </Nav.Link> */}
+
+                <NavDropdown
+                  className="navn"
+                  title="Communtiy"
+                  id="navbarScrollingDropdown"
+                >
+                  <NavDropdown.Item className="eee">
+                    <Link to="/Communtiy" className="navna">
+                      Blog
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/ProblemsSolving" className="navna">
+                      Problems Solving
+                    </Link>
+                  </NavDropdown.Item>
+                </NavDropdown>
+
                 <Nav.Link>
                   <Link to="/Workers" className="navn">
                     Workers

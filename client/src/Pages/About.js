@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import "../style/About.css";
 import Footer from "../Components/Footer";
 import { Form } from "react-bootstrap";
+import WOW from "wowjs";
 
 export default function About() {
   return (

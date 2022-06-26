@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/Cardsworkers.css";
 import { Link } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 export default function Cardsworkers() {
   return (
@@ -52,6 +53,17 @@ export default function Cardsworkers() {
         </p>
         <p>HAcker</p>
       </div>
+      <div className="sta">
+        <ReactStars
+          {...{
+            size: 25,
+            value: 3.5,
+            edit: false,
+            isHalf: true,
+          }}
+        />{" "}
+      </div>
+
       <button className="button" type="submit">
         <Link to="/WProfile" className="aa">
           Profile{" "}

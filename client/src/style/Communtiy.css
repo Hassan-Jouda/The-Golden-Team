@@ -7,6 +7,7 @@
   width: 18rem;
   margin: 30px;
   display: flex;
+  margin-left: 500px;
 }
 .like {
   width: 30px;
@@ -21,6 +22,40 @@
 .ttt {
   background-color: rgb(255, 255, 255) !important;
 }
-.nnn {
-  top: 50px;
+.nnnz {
+  top: 100px !important;
+  margin-top: 100px;
 }
+.dda {
+  margin-top: 50px;
+}
+.ffa {
+  margin-left: -250 !important;
+}
+.ssa {
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 150px !important;
+}
+.dada {
+  margin: 20px;
+  margin-left: 250px;
+}
+.ssd {
+  margin: 20px;
+}
+.postt {
+  margin: 10px;
+}
+.dropdown-menu.show {
+  margin-left: -250 !important;
+}
+/* /////////////////////////////////////// */
+.aaaa {
+  margin-left: 300px;
+}
+
+/* .dropdown-menu.show {
+  display: block;
+  margin-left: -230px;
+} */

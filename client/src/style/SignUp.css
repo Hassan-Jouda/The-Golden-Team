@@ -4,18 +4,22 @@
 }
 
 .gorm {
-  margin-top: 30px;
+  margin-top: 0px;
   background: #ffffff !important;
   font-family: "Fira Sans", sans-serif;
-  border-radius: 20px;
-  box-shadow: 0 0px 15px rgba(134, 134, 134, 0.7);
-  border-color: #0071ce !important;
-  background: linear-gradient(
+  /* border-radius: 20px;
+  box-shadow: 0 0px 10px rgba(134, 134, 134, 0.7);
+  /* border-color: #0071ce !important; */
+
+  /* background: linear-gradient(
     92.48deg,
-    #ffffff 2.08%,
-    #ccd0df 117.25%,
+    rgba(82, 170, 221, 0.651) 0.08%,
+    #7387ce 117.25%,
     #ffffff 2.08%
-  ) !important;
+  ) !important; */
+
+  margin-left: 800px;
+  margin-top: -630px;
 }
 
 h1,
@@ -113,4 +117,17 @@ html,
 .buttono:hover {
   background-color: #15a9f3;
   transform: scale(1.03);
+}
+
+.imgg {
+  width: 50%;
+  height: 100vh;
+  right: 50px;
+  margin-left: -700px;
+}
+.ffff {
+  color: rgb(6, 17, 173) !important;
+}
+.dadaa {
+  color: rgb(59, 138, 228);
 }

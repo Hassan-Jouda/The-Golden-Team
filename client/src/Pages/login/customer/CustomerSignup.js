@@ -14,10 +14,12 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
     });
     console.log(data);
   };
-  const CustomerSignup = () => {
+  const CustomerSignup = (e) => {
     console.log(data);
+    e.preventDefault();
+
     axios
-      .post("http://localhost:5000/api/addCustomer", data)
+      .post("http://localhost:5000/customer/addCustomer", data)
 
       .then((res) => {
         window.localStorage.setItem("auth", "true");
@@ -30,41 +32,37 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
       })
       .catch((err) => console.log(err.message));
   };
-
+  // Make serach
   return (
     <div>
+      <img
+        className="imgg"
+        src="https://scribie.com/assets/front/illustrations/Welcome-to-scribie-512x391.svg"
+      />
       <form className="gorm">
-        <h3>Sign Up As A Customer</h3>
+        <h3 className="ffff">Sign Up As A Customer</h3>
         <div className="mb-3">
-          <label>First name</label>
+          <label className="dadaa">full name</label>
           <input
             type="text"
             className="form-control"
-            placeholder="First name"
+            placeholder="full name"
             id="name"
             onChange={setUserData}
           />
         </div>
         <div className="mb-3">
-          <label>Last name</label>
+          <label className="dadaa">Mobile Number</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Last name"
+            placeholder="Your Number"
             id="phone"
             onChange={setUserData}
           />
         </div>
         <div className="mb-3">
-          <label>Mobile Number</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Your Number"
-          />
-        </div>
-        <div className="mb-3">
-          <label>Email address</label>
+          <label className="dadaa">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -74,7 +72,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
           />
         </div>
         <div className="mb-3">
-          <label>Password</label>
+          <label className="dadaa">Password</label>
           <input
             type="password"
             className="form-control"
@@ -83,7 +81,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
             onChange={setUserData}
           />
           <div className="mb-3">
-            <label>Conforem Password</label>
+            <label className="dadaa">Conforem Password</label>
             <input
               type="password"
               className="form-control"

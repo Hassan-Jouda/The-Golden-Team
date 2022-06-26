@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 app.use(cors());
 
 const CONNECTION_URL =
-  "mongodb+srv://hassan:0011@cluster0.2tj7f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://Hassan:059509@cluster0.pjcmnzm.mongodb.net/?retryWrites=true&w=majority";
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 mongoose
   .connect(CONNECTION_URL, {
@@ -30,7 +30,7 @@ mongoose
     )
   )
   .catch((err) => console.log(err.message));
-
+1;
 app.use("/customer", customer);
 app.use("/worker", worker);
 

@@ -15,8 +15,8 @@ import EditProfile from "./Pages/EditProfile";
 import Login from "./Pages/login/Login";
 import Workers from "./Pages/Workers";
 import Signup from "./Pages/login/Signup";
-import TParticles from "./Components/TParticles";
-import PreLoader1 from "./Components/PreLoader1";
+import CardProfile from "./Components/CardProfile";
+import ProblemsSolving from "./Pages/ProblemsSolving";
 function App() {
   return (
     <div className="App">
@@ -32,10 +32,12 @@ function App() {
 
           <Route path="/WorkerSignup" element={<WorkerSignup />} />
           <Route path="/CustomerSignup" element={<CustomerSignup />} />
+          <Route path="/ProblemsSolving" element={<ProblemsSolving />} />
 
+          <Route path="/WProfile" element={<WProfile />} />
           <Route path="/EditProfile" element={<EditProfile />} />
           <Route path="/Profile" element={<Profile />} />
-          <Route path="/WProfile" element={<wProfile />} />
+          <Route path="/CardProfile" element={<CardProfile />} />
           <Route path="/Workers" element={<Workers />} />
           <Route path="/Communtiy" element={<Communtiy />} />
         </Routes>

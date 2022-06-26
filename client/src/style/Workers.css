@@ -17,6 +17,7 @@
 .titleFilters {
   font-size: 20px;
   font-weight: bold;
+  left: 50px;
 }
 
 .mainFiltersWorkers input {
@@ -45,4 +46,18 @@
   /* background-color: red; */
   width: 100%;
   padding-top: 35px;
+}
+
+.fff {
+  left: 34px;
+  top: 473px;
+
+  background: #1572a1 !important;
+  border-radius: 6px;
+}
+
+.fff:hover {
+  background: #1572a1;
+  color: white;
+  transform: scale(1.03);
 }

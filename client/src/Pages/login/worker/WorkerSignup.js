@@ -14,11 +14,11 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
     });
     console.log(data);
   };
-  const createWorker = () => {
+  const createWorker = (e) => {
     console.log(data);
-
+    e.preventDefault();
     axios
-      .post("http://localhost:5000/api/addWorker", data)
+      .post("http://localhost:5000/worker/addWorker", data)
       .then((res) => {
         setAuth(true);
         console.log(res);
@@ -33,7 +33,11 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
   };
 
   return (
-    <div>
+    <div className="ffds">
+      <img
+        className="imgg"
+        src="https://scribie.com/assets/front/illustrations/Welcome-to-scribie-512x391.svg"
+      />
       <form className="gorm">
         <h3>Sign Up As A WORKER</h3>
         <div className="mb-3">
@@ -62,33 +66,45 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
             type="text"
             className="form-control"
             placeholder="Your Number"
-          />
-        </div>
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-            id="email"
             onChange={setUserData}
           />
         </div>
         <div className="mb-3">
-          <label>Password</label>
+          <label>location</label>
           <input
-            type="password"
+            type="text"
             className="form-control"
-            placeholder="Enter password"
-            id="password"
+            placeholder="Enter location"
+            id="text"
+            onChange={setUserData}
+          />
+        </div>
+        <div className="mb-3">
+          <label>job</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter job"
+            id="job"
             onChange={setUserData}
           />
           <div className="mb-3">
-            <label>Conforem Password</label>
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              id="email"
+              onChange={setUserData}
+            />
+          </div>
+          <div className="mb-3">
+            <label> Password</label>
             <input
               type="password"
               className="form-control"
               placeholder="Enter password"
+              onChange={setUserData}
             />
           </div>
           <div className="d-grid">

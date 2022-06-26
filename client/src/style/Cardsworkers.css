@@ -6,6 +6,8 @@
   margin-bottom: 35px;
   box-shadow: 0px 0px 8px #a3a3a3;
   /* position: relative; */
+  margin-right: 700px;
+  margin-top: -10px;
 }
 
 .backgroundWorkerCard {
@@ -43,7 +45,25 @@
 
 .aboutWorkerCard * {
   margin: 0;
+  margin-left: 5px;
 }
 .button {
-  background-color: #0d6efd;
+  background-color: #0071ce;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.5s ease;
+}
+.button:hover {
+  transform: scale(1.03);
+}
+.sta {
+  margin-left: 100px;
 }
