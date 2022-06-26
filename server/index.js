@@ -26,16 +26,14 @@ mongoose
   })
   .then(() =>
     app.listen(PORT, () =>
-      console.log(`connection is established and running on port: ${PORT}`)
-    )
+      console.log(`connection is established and running on port: ${PORT}`),
+    ),
   )
   .catch((err) => console.log(err.message));
 1;
-app.use("/customer", customer);
-app.use("/worker", worker);
-app.get("/", (req, res) => {
-  res.send("got em");
-});
+app.use("/customer", customerRoutes);
+app.use("/worker", workerRoutes);
+
 app.post("/login", (req, res) => {
   customer.find({ email: req.body.email }, { password: 1 }).then((data) => {
     if (data.length === 0) {
