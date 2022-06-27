@@ -82,7 +82,7 @@ function App({ pro, setPro }) {
           />
           <Route
             path="/Profile"
-            element={<Profile current={current} etPro={setPro} pro={pro} />}
+            element={<Profile current={current} setPro={setPro} pro={pro} />}
           />
           <Route path="/CardProfile" element={<CardProfile />} />
           <Route path="/Workers" element={<Workers />} />
