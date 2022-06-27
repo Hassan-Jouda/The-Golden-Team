@@ -22,66 +22,58 @@ const NavBar = ({ auth, setAuth }) => {
               </Link>
             </Navbar.Brand>
             <Nav className="m1-auto">
-              {/* <Nav.Link>
-                <Link to="/" className="navn">
-                  {" "}
-                  Home{" "}
-                </Link>
-              </Nav.Link> */}
               <Nav.Link>
                 <Link to="/About" className="navn">
                   AboutUs
                 </Link>
               </Nav.Link>
-              {/* {auth && ( */}
-              <>
-                {/* <Nav.Link>
-                  <Link to="/Communtiy" className="navn">
-                    Community
-                  </Link>
-                </Nav.Link> */}
+              {auth && (
+                <>
+                  <NavDropdown
+                    className="navn"
+                    title="Communtiy"
+                    id="navbarScrollingDropdown"
+                  >
+                    <NavDropdown.Item className="eee">
+                      <Link to="/Communtiy" className="navna">
+                        Blog
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link to="/ProblemsSolving" className="navna">
+                        Problems Solving
+                      </Link>
+                    </NavDropdown.Item>
+                  </NavDropdown>
 
-                <NavDropdown
-                  className="navn"
-                  title="Communtiy"
-                  id="navbarScrollingDropdown"
-                >
-                  <NavDropdown.Item className="eee">
-                    <Link to="/Communtiy" className="navna">
-                      Blog
+                  <Nav.Link>
+                    <Link to="/Workers" className="navn">
+                      Workers
                     </Link>
-                  </NavDropdown.Item>
-                  <NavDropdown.Item>
-                    <Link to="/ProblemsSolving" className="navna">
-                      Problems Solving
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/Profile" className="links">
+                      <FaUser className="userr" />
                     </Link>
-                  </NavDropdown.Item>
-                </NavDropdown>
-
-                <Nav.Link>
-                  <Link to="/Workers" className="navn">
-                    Workers
+                  </Nav.Link>
+                </>
+              )}
+              <div>
+                {auth ? (
+                  <>
+                    <button className="navBtn" onClick={logout}>
+                      <Link to="/" className="navn">
+                        Logout
+                      </Link>
+                    </button>
+                  </>
+                ) : (
+                  <Link to="/Signup" className="sin">
+                    Login
                   </Link>
-                </Nav.Link>
-              </>
-              {/* )} */}
-              {/* {auth ? ( */}
-              <>
-                {/* <button className="navBtn" onClick={logout}>
-                  <Link to="/" className="navn">
-                    Logout
-                  </Link>
-                </button> */}
-
-                <Nav.Link>
-                  <Link to="/Profile" className="links">
-                    <FaUser className="userr" />
-                  </Link>
-                </Nav.Link>
-              </>
-              <Link to="/Signup" className="sin">
-                Login
-              </Link>
+                )}
+              </div>
             </Nav>
           </Container>
         </Navbar>

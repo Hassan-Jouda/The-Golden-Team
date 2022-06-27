@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Form } from "react-bootstrap";
 import "../../style/Login.css";
 export default function Login({ setAuth, current, setCurrent }) {
-  const [data, setData] = React.useState({});
-  const [error, setError] = React.useState("");
+  const [data, setData] = useState({});
+  const [error, setError] = useState("");
   const setUserData = (e) => {
     setData({
       ...data,
@@ -32,7 +32,7 @@ export default function Login({ setAuth, current, setCurrent }) {
           setCurrent({
             name: res.data.data.name,
             email: res.data.data.email,
-            bio: res.data.data.bio,
+            job: res.data.data.job,
             college_degree: res.data.data.college_degree,
             location: res.data.data.location,
             phone: res.data.data.phone,
@@ -45,7 +45,7 @@ export default function Login({ setAuth, current, setCurrent }) {
             JSON.stringify({
               name: res.data.data.name,
               email: res.data.data.email,
-              bio: res.data.data.bio,
+              job: res.data.data.job,
               college_degree: res.data.data.college_degree,
               location: res.data.data.location,
               phone: res.data.data.phone,
@@ -73,10 +73,11 @@ export default function Login({ setAuth, current, setCurrent }) {
           <h1>Welcome Back!</h1>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <p className="p1">Email or Phone Number</p>
+            <p className="p1">Email</p>
             <Form.Control
               type="text"
               className="C-input"
+              id="email"
               onChange={setUserData}
             />
           </Form.Group>
@@ -86,6 +87,7 @@ export default function Login({ setAuth, current, setCurrent }) {
             <Form.Control
               type="text"
               className="C-input"
+              id="password"
               onChange={setUserData}
             />
           </Form.Group>

@@ -5,6 +5,8 @@ const customerSchema = mongoose.Schema({
   phone: String,
   email: String,
   password: String,
+  job: String,
+
   location: {
     type: String,
     default: "-",
@@ -13,7 +15,6 @@ const customerSchema = mongoose.Schema({
     type: String,
     default: "-",
   },
-  job: String,
   username: {
     type: String,
     default: "-",

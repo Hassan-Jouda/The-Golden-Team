@@ -2,14 +2,21 @@ import "../../../style/SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-export default function WorkerSignup({ setAuth, current, setCurrent }) {
-  const [data, setData] = useState({});
-  let job = window.localStorage.getItem("job");
+export default function WorkerSignup({
+  setAuth,
+  current,
+  setCurrent,
+  setData,
+  data,
+}) {
+  // const [data, setData] = useState({});
+  // let job = window.localStorage.getItem("job");
   const navigate = useNavigate();
+  const [pro, setPro] = useState(localStorage.getItem("pro") ? true : false);
+
   const setUserData = (e) => {
     setData({
       ...data,
-      job: job,
       [e.target.id]: e.target.value,
     });
     console.log(data);
@@ -22,14 +29,15 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
       .then((res) => {
         setAuth(true);
         console.log(res);
-        window.localStorage.setItem("auth", true);
+        window.localStorage.setItem("pro", "true");
+        setPro(true);
+        window.localStorage.setItem("auth", "true");
         setCurrent(data);
         console.log(current);
         window.localStorage.setItem("current", JSON.stringify(data));
-
-        navigate("/");
       })
       .catch((err) => console.log(err.message));
+    navigate("/");
   };
 
   return (
@@ -41,7 +49,7 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
       <form className="gorm">
         <h3>Sign Up As A WORKER</h3>
         <div className="mb-3">
-          <label>First name</label>
+          <label>Full name</label>
           <input
             type="text"
             className="form-control"
@@ -51,21 +59,12 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
           />
         </div>
         <div className="mb-3">
-          <label>Last name</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Last name"
-            id="phone"
-            onChange={setUserData}
-          />
-        </div>
-        <div className="mb-3">
           <label>Mobile Number</label>
           <input
             type="text"
             className="form-control"
             placeholder="Your Number"
+            id="phone"
             onChange={setUserData}
           />
         </div>
@@ -75,7 +74,7 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
             type="text"
             className="form-control"
             placeholder="Enter location"
-            id="text"
+            id="location"
             onChange={setUserData}
           />
         </div>
@@ -104,6 +103,7 @@ export default function WorkerSignup({ setAuth, current, setCurrent }) {
               type="password"
               className="form-control"
               placeholder="Enter password"
+              id="password"
               onChange={setUserData}
             />
           </div>

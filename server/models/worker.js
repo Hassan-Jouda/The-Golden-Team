@@ -13,7 +13,7 @@ const workerSchema = mongoose.Schema({
     type: String,
     default: "-",
   },
-  profession: {
+  job: {
     type: String,
     default: "-",
   },
@@ -21,11 +21,7 @@ const workerSchema = mongoose.Schema({
     type: String,
     default: "-",
   },
-  job: String,
-  username: {
-    type: String,
-    default: "-",
-  },
+  skils: String,
 });
 
 const worker = mongoose.model("worker", workerSchema);

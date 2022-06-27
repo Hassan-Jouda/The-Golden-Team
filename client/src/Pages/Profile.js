@@ -12,7 +12,17 @@ import {
 import "../style/Profile.css";
 import { Link } from "react-router-dom";
 
-export default function Profile() {
+export default function Profile({ current, pro, setPro }) {
+  const Name = current.name;
+  const Username = "@car.fixing";
+  const JobsCompleted = "55%";
+  const OnBudget = "55%";
+  const OnTime = "99%";
+  const RepeatHireRate = "55%";
+  const job = current.job;
+  const About = current.bio;
+  const Phone = current.phone;
+  const City = current.location;
   return (
     <div>
       <div className="btnsti">
@@ -40,17 +50,7 @@ export default function Profile() {
           <Form.Label>First name</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Hassan"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-        <Form.Group className="mb-3 inp" controlId="exampleForm.ControlInput1">
-          <Form.Label>sacund name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Jouda"
+            placeholder={current.name}
             aria-label="Disabled input example"
             disabled
             readOnly
@@ -68,6 +68,18 @@ export default function Profile() {
             readOnly
           />
         </Form.Group>
+
+        <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
+          <Form.Label>Location</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Gaza"
+            aria-label="Disabled input example"
+            disabled
+            readOnly
+          />
+        </Form.Group>
+
         <Form.Group className="mb-1 age" controlId="exampleForm.ControlInput1">
           <Form.Label>Age</Form.Label>
           <Form.Control
@@ -79,28 +91,38 @@ export default function Profile() {
           />
         </Form.Group>
       </Form>
-      <Form className="forpro">
-        <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
-          <Form.Label>Profession</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Hacker"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-        <Form.Group className="mb-1 inp" controlId="exampleForm.ControlInput1">
-          <Form.Label>College Degrees</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="student"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-      </Form>
+      {pro && (
+        <>
+          <Form className="forpro">
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>job</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Hacker"
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-1 inp"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>skils</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder=""
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+          </Form>
+        </>
+      )}
     </div>
   );
 }

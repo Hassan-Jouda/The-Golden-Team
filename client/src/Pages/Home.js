@@ -59,28 +59,28 @@ export default function Home({ auth, setAuth }) {
       <div>
         {" "}
         <section className="homeImg"></section>
-        {/* <h2 className="topic"> Swift House</h2> */}
       </div>
 
       <h1 style={{ textAlign: "center", margin: "20px" }}>Fields: </h1>
-
-      {/* <Link to="/Workers">
-        <div className="col-md-4 container cards ">{Cards}</div>
-      </Link> */}
-
-      {/* {auth ? ( */}
-      <div className="Fields">
-        <Link to="/Workers">
-          <div className="col-md-4 container cards " id="field">
-            {Cards}
-          </div>
-        </Link>
-      </div>
-      {/* ) : ( */}
-      {/* <Link to="/Signup">
-          <div className="col-md-4 container cards ">{Cards}</div>
-        </Link> */}
-      {/* )} */}
+      <di>
+        {auth ? (
+          <>
+            <div className="Fields">
+              <Link to="/Workers">
+                <div className="col-md-4 container cards " id="field">
+                  {Cards}
+                </div>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <Link to="/Signup">
+            <div className="col-md-4 container cards" id="field">
+              {Cards}
+            </div>
+          </Link>
+        )}
+      </di>
 
       <Footer />
     </div>

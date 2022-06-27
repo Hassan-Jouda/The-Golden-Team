@@ -17,33 +17,73 @@ import Workers from "./Pages/Workers";
 import Signup from "./Pages/login/Signup";
 import CardProfile from "./Components/CardProfile";
 import ProblemsSolving from "./Pages/ProblemsSolving";
-function App() {
+function App({ pro, setPro }) {
   const [auth, setAuth] = useState(localStorage.getItem("auth") ? true : false);
   const [current, setCurrent] = useState(
     localStorage.getItem("current")
       ? JSON.parse(localStorage.getItem("current"))
       : {}
   );
+
   console.log(current);
   return (
     <div className="App">
       <Router>
-        <NavBar />
+        <NavBar auth={auth} setAuth={setAuth} />
 
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route
+            path="/"
+            exact
+            element={<Home auth={auth} setAuth={setAuth} />}
+          />
           <Route path="/About" element={<About />} />
 
-          <Route path="/Login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/Login"
+            element={
+              <Login
+                setAuth={setAuth}
+                current={current}
+                setCurrent={setCurrent}
+              />
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <Signup
+                setAuth={setAuth}
+                current={current}
+                setCurrent={setCurrent}
+              />
+            }
+          />
 
-          <Route path="/WorkerSignup" element={<WorkerSignup />} />
+          <Route
+            path="/WorkerSignup"
+            element={
+              <WorkerSignup
+                setAuth={setAuth}
+                current={current}
+                setCurrent={setCurrent}
+                setPro={setPro}
+                pro={pro}
+              />
+            }
+          />
           <Route path="/CustomerSignup" element={<CustomerSignup />} />
           <Route path="/ProblemsSolving" element={<ProblemsSolving />} />
 
           <Route path="/WProfile" element={<WProfile />} />
-          <Route path="/EditProfile" element={<EditProfile />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route
+            path="/EditProfile"
+            element={<EditProfile current={current} setCurrent={setCurrent} />}
+          />
+          <Route
+            path="/Profile"
+            element={<Profile current={current} etPro={setPro} pro={pro} />}
+          />
           <Route path="/CardProfile" element={<CardProfile />} />
           <Route path="/Workers" element={<Workers />} />
           <Route path="/Communtiy" element={<Communtiy />} />

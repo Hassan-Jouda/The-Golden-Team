@@ -6,6 +6,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
   const [data, setData] = useState({});
   let job = window.localStorage.getItem("job");
   const navigate = useNavigate();
+
   const setUserData = (e) => {
     setData({
       ...data,
@@ -24,13 +25,16 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
       .then((res) => {
         window.localStorage.setItem("auth", "true");
         setAuth(true);
+
         console.log(res);
         setCurrent(data);
         console.log(current);
         window.localStorage.setItem("current", JSON.stringify(data));
-        navigate("/");
       })
+
       .catch((err) => console.log(err.message));
+
+    navigate("/About");
   };
   // Make serach
   return (
@@ -89,7 +93,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
             />
           </div>
           <div className="d-grid">
-            <button className="buttono" onClick={(e) => CustomerSignup(e)}>
+            <button className="buttono" onClick={CustomerSignup}>
               Sign Up
             </button>
           </div>
