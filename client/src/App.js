@@ -72,7 +72,16 @@ function App({ pro, setPro }) {
               />
             }
           />
-          <Route path="/CustomerSignup" element={<CustomerSignup />} />
+          <Route
+            path="/CustomerSignup"
+            element={
+              <CustomerSignup
+                setAuth={setAuth}
+                current={current}
+                setCurrent={setCurrent}
+              />
+            }
+          />
           <Route path="/ProblemsSolving" element={<ProblemsSolving />} />
 
           <Route path="/WProfile" element={<WProfile />} />

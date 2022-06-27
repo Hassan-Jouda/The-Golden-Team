@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { FaUser } from "react-icons/fa";
 
-const NavBar = ({ auth, setAuth }) => {
+const NavBar = ({ auth, setAuth, setPro, pro }) => {
   const logout = () => {
     window.localStorage.removeItem("auth");
     window.localStorage.removeItem("current");
+    window.localStorage.removeItem("pro");
     setAuth(false);
   };
   return (

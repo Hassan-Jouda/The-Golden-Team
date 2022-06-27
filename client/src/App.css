@@ -1,5 +1,5 @@
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
@@ -128,12 +128,17 @@
   transform: scale(1.03);
 }
 
-.userr{
+.userr {
   color: #ffffff;
   transition: 0.3s ease;
   font-size: 17px;
 }
 
-.userr:hover{
+.userr:hover {
   color: #282c34;
+}
+
+.log {
+  width: 30px;
+  height: 30px;
 }

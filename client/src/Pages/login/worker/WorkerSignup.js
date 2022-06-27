@@ -2,14 +2,8 @@ import "../../../style/SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-export default function WorkerSignup({
-  setAuth,
-  current,
-  setCurrent,
-  setData,
-  data,
-}) {
-  // const [data, setData] = useState({});
+export default function WorkerSignup({ setAuth, current, setCurrent }) {
+  const [data, setData] = useState({});
   // let job = window.localStorage.getItem("job");
   const navigate = useNavigate();
   const [pro, setPro] = useState(localStorage.getItem("pro") ? true : false);
@@ -29,7 +23,7 @@ export default function WorkerSignup({
       .then((res) => {
         setAuth(true);
         console.log(res);
-        window.localStorage.setItem("pro", "true");
+        window.localStorage.setItem("pro", true);
         setPro(true);
         window.localStorage.setItem("auth", "true");
         setCurrent(data);

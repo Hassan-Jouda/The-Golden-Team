@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Form } from "react-bootstrap";
 import "../../style/Login.css";
-export default function Login({ setAuth, current, setCurrent }) {
+export default function Login({ setAuth, pro, setPro, current, setCurrent }) {
   const [data, setData] = useState({});
   const [error, setError] = useState("");
   const setUserData = (e) => {
@@ -19,7 +19,7 @@ export default function Login({ setAuth, current, setCurrent }) {
   const logIn = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/login", {
+      .post("http://localhost:5000/login", {
         email: data.email,
       })
       .then((res) => {
@@ -27,8 +27,12 @@ export default function Login({ setAuth, current, setCurrent }) {
         console.log(res.data.data.password);
         if (res.data.data.password === data.password) {
           window.localStorage.setItem("auth", "true");
+          window.localStorage.setItem("pro", true);
+
           console.log(`ps again: ${res.data.data.password}`);
+
           setAuth(true);
+
           setCurrent({
             name: res.data.data.name,
             email: res.data.data.email,

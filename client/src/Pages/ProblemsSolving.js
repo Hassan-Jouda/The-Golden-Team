@@ -24,7 +24,7 @@ import "../style/Communtiy.css";
 import { storage } from "../firebase/firebase";
 import { v4 } from "uuid";
 import { ref, uploadBytes } from "firebase/storage";
-export default function ProblemsSolving() {
+export default function ProblemsSolving({ current }) {
   const [newPost, setNewPost] = useState("");
   const [newComment, setNewComment] = useState("");
   const [visible, setVisible] = useState(false);

@@ -14,7 +14,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import Dropdown from "react-bootstrap/Dropdown";
 import "../style/Communtiy.css";
-export default function Community() {
+export default function Community({ current }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -34,6 +34,7 @@ export default function Community() {
     addDoc(collection(db, "recipes"), payload);
   };
   const theme = createTheme();
+  // const Name = current.name;
 
   return (
     <Dropdown className="ffa">
@@ -101,7 +102,6 @@ export default function Community() {
                     fullWidth
                     id="author"
                     name="author"
-                    label="Username"
                   />
                   <Button
                     type="submit"

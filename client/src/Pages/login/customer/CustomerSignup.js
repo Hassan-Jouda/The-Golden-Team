@@ -10,7 +10,6 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
   const setUserData = (e) => {
     setData({
       ...data,
-      job: job,
       [e.target.id]: e.target.value,
     });
     console.log(data);
@@ -34,7 +33,7 @@ export default function CustomerSignup({ setAuth, current, setCurrent }) {
 
       .catch((err) => console.log(err.message));
 
-    navigate("/About");
+    navigate("/");
   };
   // Make serach
   return (

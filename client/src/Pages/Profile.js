@@ -12,7 +12,13 @@ import {
 import "../style/Profile.css";
 import { Link } from "react-router-dom";
 
-export default function Profile({ current, pro, setPro }) {
+export default function Profile({ current, pro, setPro, auth, setAuth }) {
+  const logout = () => {
+    window.localStorage.removeItem("auth");
+    window.localStorage.removeItem("current");
+    window.localStorage.removeItem("pro");
+    setAuth(false);
+  };
   const Name = current.name;
   const Username = "@car.fixing";
   const JobsCompleted = "55%";
@@ -25,74 +31,72 @@ export default function Profile({ current, pro, setPro }) {
   const City = current.location;
   return (
     <div>
-      <div className="btnsti">
-        <h2 className="sti">setitings</h2>
-        <ButtonGroup vertical>
-          <Link to="/Profile" className="navn">
-            <Button className="btns">Public Profile</Button>
-          </Link>
-          <Link to="/EditProfile" className="navn">
-            <Button className="btns">Edit Profile</Button>
-          </Link>
-        </ButtonGroup>
-      </div>
-      <div className="tit">
-        <h3> Profile</h3>
-        <img
-          src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
-          alt="app img"
-          className="proimg"
-        />
-      </div>
-
-      <Form className="forpro">
-        <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
-          <Form.Label>First name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder={current.name}
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-      </Form>
-      <Form className="forpro">
-        <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
-          <Form.Label>Location</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Gaza"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3 name" controlId="exampleForm.ControlInput1">
-          <Form.Label>Location</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Gaza"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-1 age" controlId="exampleForm.ControlInput1">
-          <Form.Label>Age</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="13"
-            aria-label="Disabled input example"
-            disabled
-            readOnly
-          />
-        </Form.Group>
-      </Form>
-      {pro && (
+      {pro ? (
         <>
+          <div className="btnsti">
+            <h2 className="sti">setitings</h2>
+            <ButtonGroup vertical>
+              <Link to="/Profile" className="navn">
+                <Button className="btns">Public Profile</Button>
+              </Link>
+              <Link to="/EditProfile" className="navn">
+                <Button className="btns">Edit Profile</Button>
+              </Link>
+            </ButtonGroup>
+          </div>
+          <div className="tit">
+            <h3> Profile</h3>
+            <img
+              src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+              alt="app img"
+              className="proimg"
+            />
+          </div>
+
+          <Form className="forpro">
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>Full name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.name}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+          </Form>
+          <Form className="forpro">
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>Location</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.location}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>phone</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.phone}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+          </Form>
           <Form className="forpro">
             <Form.Group
               className="mb-3 name"
@@ -101,7 +105,7 @@ export default function Profile({ current, pro, setPro }) {
               <Form.Label>job</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Hacker"
+                placeholder={current.job}
                 aria-label="Disabled input example"
                 disabled
                 readOnly
@@ -114,13 +118,96 @@ export default function Profile({ current, pro, setPro }) {
               <Form.Label>skils</Form.Label>
               <Form.Control
                 type="text"
-                placeholder=""
+                placeholder={current.bio}
                 aria-label="Disabled input example"
                 disabled
                 readOnly
               />
             </Form.Group>
           </Form>
+          <button className="navBtn" onClick={logout}>
+            <Link to="/" className="navn" onClick={logout}>
+              <img
+                className="log"
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828427.png"
+              />
+            </Link>
+          </button>
+        </>
+      ) : (
+        <>
+          <div className="btnsti">
+            <h2 className="sti">setitings</h2>
+            <ButtonGroup vertical>
+              <Link to="/Profile" className="navn">
+                <Button className="btns">Public Profile</Button>
+              </Link>
+              <Link to="/EditProfile" className="navn">
+                <Button className="btns">Edit Profile</Button>
+              </Link>
+            </ButtonGroup>
+          </div>
+          <div className="tit">
+            <h3> Profile</h3>
+            <img
+              src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg"
+              alt="app img"
+              className="proimg"
+            />
+          </div>
+
+          <Form className="forpro">
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>Full name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.name}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+          </Form>
+          <Form className="forpro">
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>Location</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.location}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3 name"
+              controlId="exampleForm.ControlInput1"
+            >
+              <Form.Label>phone</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder={current.phone}
+                aria-label="Disabled input example"
+                disabled
+                readOnly
+              />
+            </Form.Group>
+          </Form>
+          <button className="navBtn" onClick={logout}>
+            <Link to="/" className="navn" onClick={logout}>
+              <img
+                className="log"
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828427.png"
+              />
+            </Link>
+          </button>
         </>
       )}
     </div>
