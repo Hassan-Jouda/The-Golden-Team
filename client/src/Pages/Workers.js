@@ -7,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
+import Filter from "../Components/Filter";
 export default function Workers() {
   const workers = [
     {
@@ -89,22 +89,7 @@ export default function Workers() {
 
   return (
     <div className="workers">
-      <div className="mainFiltersWorkers">
-        <p className="titleFilters">Filters:</p>
-        <from className="Filters">
-          <p>Min Price:</p>
-          <input type="number" />
-          <p>Max Price:</p>
-          <input type="number" />
-          <p>Hours of Working:</p>
-          <input type="number" />
-          <p>Language:</p>
-          <input type="text" />
-          <p>Experince:</p>
-          <input type="tetx" />
-          <button className="fff">Submit</button>
-        </from>
-      </div>
+      <Filter />
       <div className="mainWorkers cards container">
         <Form className="d-flex">
           <Form.Control

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Card from "../Components/cardhome";
 import Footer from "../Components/Footer";
 import "../style/Home.css";
-
+import Featured from "../Components/Featured";
 export default function Home({ auth, setAuth }) {
   const crafts = [
     {
@@ -59,6 +59,10 @@ export default function Home({ auth, setAuth }) {
       <div>
         {" "}
         <section className="homeImg"></section>
+      </div>
+
+      <div className="ttss">
+        <Featured />
       </div>
 
       <h1 style={{ textAlign: "center", margin: "20px" }}>Fields: </h1>
