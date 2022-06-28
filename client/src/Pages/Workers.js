@@ -9,88 +9,14 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Filter from "../Components/Filter";
 export default function Workers() {
-  const workers = [
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-    {
-      name: "Ahmad Herzallah",
-      username: "@car.fixing",
-      profileImg:
-        "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
-      backgroundUrl:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A724RBEN2AI6PHCTNILJX2YJKM.jpg&w=1484",
-      about:
-        "Ahmad is one of the most worst workers here in the website, also you don’t need him in anything! {don’t look at his stars}",
-    },
-  ];
+
   //make search
 
   return (
     <div className="workers">
       <Filter />
       <div className="mainWorkers cards container">
+      <div className="search" >
         <Form className="d-flex">
           <Form.Control
             type="search"
@@ -105,7 +31,10 @@ export default function Workers() {
             Search
           </Button>
         </Form>
+        </div>
+        <div className="workerss" >
         <Cardsworkers />
+      </div>
       </div>
     </div>
   );

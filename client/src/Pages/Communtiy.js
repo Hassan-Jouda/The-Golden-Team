@@ -127,8 +127,7 @@ export default function Community({ current }) {
 }
 
 //////////////////////////////////////////////
-{
-}
+
 //   /* <div className="App">
 //       <input
 //         placeholder="Name..."

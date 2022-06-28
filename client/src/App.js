@@ -83,6 +83,7 @@ function App({ pro, setPro }) {
             }
           />
           <Route path="/ProblemsSolving" element={<ProblemsSolving />} />
+          <Route path="/Workers/WProfile" element={<WProfile/>}/>
 
           <Route path="/WProfile" element={<WProfile />} />
           <Route

@@ -13,12 +13,14 @@ export default function WProfile() {
       <img
         className="backgroundProfile"
         src="https://surry.edu/uploads/images/_heroImage/GettyImages-1147804793.jpg"
+        alt=""
       />
       <div className="contProfile">
         <div className="detailsProfile">
           <div className="topDetailsProfile">
             <img
               src="https://surry.edu/uploads/images/_heroImage/GettyImages-1147804793.jpg"
+              alt=""
               className="profileImgProfile"
             />
             <div className="nameSubConProfile">

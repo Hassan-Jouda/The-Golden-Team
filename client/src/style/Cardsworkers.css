@@ -1,69 +1,81 @@
-.mainWorkerCard {
-  background-color: white;
-  width: 30%;
-  height: 350px;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  box-shadow: 0px 0px 8px #a3a3a3;
-  /* position: relative; */
-  margin-right: 700px;
-  margin-top: -10px;
+*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-.backgroundWorkerCard {
-  width: 100%;
-  height: 30%;
-  border-radius: 10px;
-  opacity: 50%;
+.cardd{
+  transition: 0.2s ease;
 }
 
-.profileImgWorkerCard {
-  width: 100px;
-  height: 100px;
-  border-radius: 150px;
-  margin-left: 20px;
-  margin-right: 30px;
+.cardd:hover{
+
+  box-shadow: inset 0em 0em 2em 0.00001em rgba(136, 136, 136, 0.3);
 }
 
-.nameConWorkerCard {
-  margin-top: 40px;
-}
-
-.nameConWorkerCard * {
-  margin: 0;
-  padding: 0;
-
-  /* font-weight: 900; */
-  /* position: rel ative; */
-}
-
-.aboutWorkerCard {
-  margin-left: 30px;
-  margin-top: 15px;
-  width: 85%;
-}
-
-.aboutWorkerCard * {
-  margin: 0;
-  margin-left: 5px;
-}
-.button {
-  background-color: #0071ce;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
+.clinks{
   text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: 0.5s ease;
+  color: black;
+  transition: ease;
 }
-.button:hover {
-  transform: scale(1.03);
+
+.clinks:hover{
+  color: black;
+  filter: brightness(150%);
 }
-.sta {
-  margin-left: 100px;
+
+.background{
+  height: 110px;
+  position: absolute;
+  opacity: 0.4;
+}
+
+.card{
+  margin: 10px !important ;
+}
+
+.g-4{
+  border-radius: 55px !important;
+  transition: ease;
+}
+
+.sta{
+  padding-left: 5px;
+}
+
+.profile{
+  top: 1px;
+  z-index: 1;
+  border-radius: 20px;
+  margin-top: 45px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.ppic{
+  border-radius: 20px;
+  width: 110px;
+  height: 110px;
+}
+
+.name{
+  width: auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user{
+  font-size: 12px;
+  padding-left: 10px;
+  color: rgb(139, 139, 139);
+}
+
+.name_user{
+  margin-top:70px ;
+  text-align: left;
+}
+
+.about{
+  text-align: left;
+  padding-left: 10px;
 }
