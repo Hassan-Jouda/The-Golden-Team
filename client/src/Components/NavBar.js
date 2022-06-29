@@ -63,7 +63,7 @@ const NavBar = ({ auth, setAuth, setPro, pro }) => {
               <div>
                 {auth ? (
                   <>
-                    <button className="navBtn" onClick={logout}>
+                    <button className="sin" onClick={logout}>
                       <Link to="/" className="navn">
                         Logout
                       </Link>

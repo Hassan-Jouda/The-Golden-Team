@@ -1,33 +1,20 @@
-/* .App1{
-  background-image: url("https://img.freepik.com/free-vector/minimal-white-gray-background-with-wavy-lines_1017-25099.jpg?w=2000");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  width: 100%;
+*{
+  font-family: "Poppins", sans-serif;
 }
-
-.App1::before{
-  content:'';
-  position:absolute;
-  z-index:-1;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  background:url(http://lorempixel.com/1600/800/nature/1) fixed center;
-  filter:blur(4px);
-  background-size:100vw auto;
-  
-  box-shadow:inset 0 0 0 50vw rgba(255,255,255,0.2)
-} 
-*/
 
 .App1 {
   padding:6vw ;
   position:relative;
 }
+
+.posts{
+  position: relative;
+  display: table;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center;
+}
+
 .App1:before{
   content:'';
   position:absolute;
@@ -43,6 +30,14 @@
   box-shadow:inset 0 0 0 50vw rgba(255,255,255,0.2)
 }
 
+.inputt{
+  width: 100%;
+}
+
+#Comment{
+  text-align: left;
+  margin: 20px ;
+}
 
 .btn1 {
   background: #202142 !important;
@@ -50,10 +45,9 @@
   color: rgb(255, 250, 250) !important;
 }
 .post {
-  width: 18rem;
-  margin: 30px;
-  display: flex;
-  margin-left: 500px;
+  min-width: 300px !important;
+  display: block;
+  float: left;
 }
 .like {
   width: 30px;
@@ -85,20 +79,46 @@
 }
 .dada {
   margin: 20px;
-  margin-left: 250px;
+  justify-content: center;
+  display: grid;
 }
+
+.dada:before{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:url("https://img.freepik.com/free-vector/abstract-white-gray-gradient-color-background_125759-204.jpg?w=2000") fixed center;
+  filter:blur(5px);
+  opacity: 0.22;
+  background-size:100vw auto;
+  box-shadow:inset 0 0 0 50vw rgba(255,255,255,0.2)
+}
+
 .ssd {
   margin: 20px;
 }
+
 .postt {
   margin: 10px;
 }
+
 .dropdown-menu.show {
   margin-left: -250 !important;
 }
 /* /////////////////////////////////////// */
 .aaaa {
   margin-left: 300px;
+}
+
+.title1{
+  color: black !important ;
+  font-size: large !important ;
+  font-weight: 700 !important ;
+  font-family: 'Poppins';
 }
 
 /* .dropdown-menu.show {

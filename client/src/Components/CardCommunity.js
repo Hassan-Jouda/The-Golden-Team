@@ -78,7 +78,7 @@ export default function TitlebarImageList() {
   return (
     <div className="dada">
       {recipes.map((recipe) => (
-        <Card sx={{ maxWidth: 345 }} theme={theme} className="dada">
+        <Card sx={{ width: 650, display:'block', minHeight:400}} theme={theme} className="dada">
           <>
             <CardHeader
               avatar={
@@ -94,7 +94,7 @@ export default function TitlebarImageList() {
                   sx={{
                     height: 60,
                     flexGrow: 1,
-                    maxWidth: 150,
+                    maxWidth: 700,
                   }}
                 >
                   <TreeItem nodeId="1" label="">
@@ -116,14 +116,15 @@ export default function TitlebarImageList() {
             />
             <CardMedia
               component="img"
-              height="194"
+              height="250"
+              width="360"
               src={`${recipe.image}`}
               srcSet={`${recipe.image}`}
               alt={recipe.title}
               loading="lazy"
             />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" className="title1" >
                 {" "}
                 {recipe.title}
               </Typography>

@@ -89,6 +89,7 @@ export default function ProblemsSolving({ current }) {
 
   return (
     <div className="App1">
+    <div className="inputt" >
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>name</Form.Label>
@@ -114,6 +115,8 @@ export default function ProblemsSolving({ current }) {
           Create Post
         </Button>
       </Form>
+      </div>
+      <div className="posts" >
       {users.map((user) => {
         return (
           <Card className="post">
@@ -149,6 +152,7 @@ export default function ProblemsSolving({ current }) {
                 }}
                 src="https://cdn-icons-png.flaticon.com/512/633/633759.png"
                 className="like"
+                alt=""
               />
             </Card.Body>
 
@@ -177,7 +181,7 @@ export default function ProblemsSolving({ current }) {
             </Button>
           </Card>
         );
-      })}
+      })}</div>
     </div>
   );
 }
